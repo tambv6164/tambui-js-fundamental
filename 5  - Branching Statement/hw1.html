@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 1 - Branching Statement</title>
+</head>
+<body>
+    
+</body>
+<script>
+let w = prompt('Nhập cân nặng của bạn (kg):');
+let h = prompt('Nhập chiều cao của bạn (cm):');
+let BMI = (100*100*w)/(h*h);
+console.log('Tình trạng cơ thể bạn:')
+if (BMI < 18.5) {
+    console.log('GẦY')
+} else if (BMI < 24.9) {
+    console.log('BÌNH THƯỜNG')
+} else if (BMI < 29.9) {
+    console.log('HƠI BÉO')
+} else if (BMI < 34.9) {
+    console.log('BÉO PHÌ CẤP ĐỘ 1')
+} else if (BMI < 39.9) {
+    console.log('BÉO PHÌ CẤP ĐỘ 2')
+} else {
+    console.log('BÉO PHÌ CẤP ĐỘ 3')
+}
+</script>
+</html>
