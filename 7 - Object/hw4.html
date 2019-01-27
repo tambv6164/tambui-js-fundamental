@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 4 - Object</title>
+</head>
+<body>
+    
+</body>
+<script>
+let inventoty = {
+    'gold' : 500,
+    'pouch' : ['flint', 'twine', 'gemstone'],
+    'backpack' : ['xylophone', 'dagger', 'bedroll', 'bread loaf']
+};
+
+inventoty.pocket = ['seashell', 'strange berry', 'lint'];
+inventoty.backpack.splice(inventoty.backpack.indexOf('dagger'), 1);
+inventoty.gold += 50;
+delete inventoty.pouch;
+
+console.log(inventoty);
+</script>
+</html>

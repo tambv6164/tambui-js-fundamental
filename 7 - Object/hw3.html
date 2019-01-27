@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 3 - Object</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let cris = {
+    name : 'Cristiano Ronaldo',
+    year : 1985,
+    nationality : 'Portugal',
+};
+console.log(cris);
+let ask = prompt('Bạn có muốn xóa thông tin nào không? (trả lời: Y hoặc N)').toUpperCase();
+if (ask == 'Y') {
+    let pro = prompt('Xin mời nhập thông tin muốn xóa (trả lời: name, year, nationality)');
+    if (Object.keys(cris).includes(pro)) {
+        delete cris[pro];
+    } else {
+        console.log('Thông tin không tồn tại!');
+    }
+    console.log(cris);
+} else if (ask == 'N') {
+    console.log('Goodbye!');
+} else {
+    console.log('Bạn đã không gõ Y hoặc N!');
+}
+</script>
+</html>

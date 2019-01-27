@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 1 - Object</title>
+</head>
+<body>
+    
+</body>
+<script>
+let cris = {
+    name : 'Cristiano Ronaldo',
+    year : 1985,
+    nationality : 'Portugal',
+};
+console.log(cris)
+let ask = prompt('Bạn có muốn thêm thông tin không? (trả lời: Y hoặc N)').toUpperCase();
+if (ask == 'Y') {
+    let pro = prompt('Bạn muốn thêm thông tin gì?');
+    let value = prompt('Giá trị tương ứng của thông tin:');
+    cris[pro] = value;
+    console.log(cris);
+} else if (ask == 'N') {
+    console.log('Goodbye!')
+} else {
+    console.log('Bạn đã không gõ Y hoặc N!')
+}
+</script>
+</html>

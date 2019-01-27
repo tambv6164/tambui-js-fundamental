@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 6 - Array</title>
+</head>
+<body>
+    
+</body>
+<script>
+let catalogue = ['T-Shirt', 'Swearter'];
+let action = ['C', 'R', 'U', 'D'];
+while (true) {
+    let ask = prompt('Welcome to our shop! What do you want (C, R, U, D)?').toUpperCase();
+    if (!action.includes(ask)) {
+        console.log('Bạn đã không lựa chọn hành động C, R, U hoặc D!');
+        break;
+    } else {
+        if (ask == 'C') {
+            let newItem = prompt('Enter new item:');
+            catalogue.push(newItem);
+        } 
+        if (ask == 'U') {
+            let viTri = prompt('Update position?');
+            if (viTri < 1 || viTri > catalogue.length || !Number.isInteger(+viTri)) {
+                console.log('Position not found!');
+            } else {
+                let newItem = prompt('New item:');
+                catalogue[viTri - 1] = newItem;
+            }
+        } 
+        if (ask == 'D') {
+            let viTri = prompt('Delete position?');
+            if (viTri < 1 || viTri > catalogue.length || !Number.isInteger(+viTri)) {
+                console.log('Position not found!');
+            } else {
+                catalogue.splice(viTri - 1, 1);
+            }
+        }
+        console.log(`Our items: ${catalogue}`);
+    }
+}
+</script>
+</html>

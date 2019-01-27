@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 4 - Array</title>
+</head>
+<body>
+    
+</body>
+<script>
+let cauThu = ['Ronaldo', 'Messi', 'Neymar'];
+console.log(cauThu);
+let ask = prompt('Bạn có muốn thay đổi tên cầu thủ nào không? (trả lời: Y hoặc N)').toUpperCase()
+if (ask == 'Y') {
+    let viTri = prompt('Xin mời nhập vị trí của cầu thủ muốn đổi tên (trả lời: 0, 1 hoặc 2):');
+    if (0 <= viTri && viTri <= 2 && Number.isInteger(+viTri)) {
+        let newName = prompt('Xin mời nhập tên mới:');
+        cauThu[viTri] = newName;
+    } else {
+        console.log('Vị trí cầu thủ không tồn tại!');
+    }
+    console.log('Danh sách cầu thủ:');
+    console.log(cauThu);
+} else if (ask == 'N') {
+    console.log('Goodbye!');
+} else {
+    console.log('Bạn đã không gõ Y hoặc N!');
+}
+</script>
+</html>
