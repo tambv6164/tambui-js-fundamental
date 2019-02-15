@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Async/Await</title>
+</head>
+<body>
+    
+</body>
+<script>
+// console.log("Hello my name is ONE");
+// console.log("Hello my name is TWO");
+// console.log("Hello my name is THREE");
+
+// console.log("Hello my name is ONE");
+
+// setTimeout(function(){
+//     console.log("Hello my name is TWO");
+// }, 3000);
+
+// console.log("Hello my name is THREE");
+
+// function wait(ms) {
+//     return new Promise(r => setTimeout(r, ms))  
+// }
+
+// function main() {
+//     console.log('ONE');
+//     wait(2000);
+//     console.log('TWO');
+// };
+
+// main();
+
+function wait(ms) {
+    return new Promise(r => setTimeout(r, ms))  
+}
+
+async function main() {
+    console.log('ONE');
+    await wait(2000);
+    console.log('TWO');
+};
+
+main();
+
+</script>
+</html>

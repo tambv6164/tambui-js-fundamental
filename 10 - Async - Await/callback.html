@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callback</title>
+</head>
+<body>
+    
+</body>
+<script>
+// function hocBai() {
+//     setTimeout(function() {
+//         console.log("study");
+//     }, 2000);
+// }
+
+// function diNgu() {
+//     console.log("zzZZZzzz...");
+// }
+
+// hocBai();
+// diNgu();
+
+function hocBai(callback) {
+    setTimeout(function() {
+        console.log("study");
+        callback(); // đây là lúc việc học xảy ra xong, callback nằm đây để báo cáo lại cho chúng ta!
+    }, 2000);
+}
+
+function diNgu() {
+    console.log("zzZZZzzz...");
+}
+
+// tạo ra một điệp viên thực thụ, tên là meCuaChi.
+// meCuaChi sẽ giúp Chi thực hiện việc diNgu ngay sau khi Chi học bài xong ( console.log("study") ).
+let meCuaChi = function() {
+    diNgu();
+}
+
+hocBai(meCuaChi);
+
+</script>
+</html>

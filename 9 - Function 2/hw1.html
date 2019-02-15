@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 1 - Function 2</title>
+</head>
+<body>
+    
+</body>
+<script>
+function removeDollar(s) {
+    if (s.includes("$")) {
+        s = s.replace(/\$/g, "");
+    }
+    return s;
+}
+let s = prompt("Xin mời nhập một chuỗi ký tự:");
+console.log("Chuỗi ký tự ban đầu là:", s);
+console.log("Chuỗi ký tự sau khi xóa bỏ dấu '$' là:", removeDollar(s));
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 2 - Function 2</title>
+</head>
+<body>
+    
+</body>
+<script>
+// Phần bài làm bên dưới được thực hiện theo gợi ý trong bài tập. 
+// Mình không thấy nó lồng vào đc đồng thời cả 2 bài toán mà chỉ phù hợp với bài xóa hết dấu cách ở 1 string thôi.
+// Gợi ý:
+//  -   Viết một function nhận vào một parameter là một string bất kỳ
+//  -   Return ra một string không chứa dấu cách
+function noSpace(s) {
+    let newS = "";
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] !== " ") {
+            newS += s[i];
+        }
+    }
+    return newS;
+}
+let s = prompt("Xin mời nhập vào 1 string:");
+console.log("String ban đầu:", s);
+console.log("String khi xóa hết dấu cách:", noSpace(s));
+</script>
+</html>
